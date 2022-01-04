@@ -6,3 +6,12 @@ CREATE TABLE IF NOT EXISTS accounts(
   email varchar(255) COMMENT 'User Email',
   picture varchar(255) COMMENT 'User Picture'
 ) default charset utf8 COMMENT '';
+CREATE TABLE IF NOT EXISTS cruises(
+  id int NOT NULL primary key AUTO_INCREMENT,
+  create_time DATETIME DEFAULT CURRENT_TIMESTAMP,
+  update_time DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  destination varchar(255) NOT NULL,
+  vacayType text NOT NULL,
+  sailDate text NOT NULL,
+  price int NOT NULL
+) default charset utf8 COMMENT '';
